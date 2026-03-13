@@ -1,73 +1,143 @@
-# React + TypeScript + Vite
+# 📱 Evidencia Móvil PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación **Progressive Web App (PWA)** multiplataforma para registrar reportes utilizando **GPS, cámara y interactivos**.  
+La aplicación permite capturar incidentes, guardar su ubicación y visualizar la información.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 👥 . Integrantes del Equipo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Jesús Orlando Delgado Azar  
+- Juan Arath López Alvídrez  
+- Héctor Antonio Terrazas Guevara  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#  . Características
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-  **PWA instalable**  
+  Funciona offline y puede instalarse como aplicación nativa.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-  **Geolocalización GPS**  
+  Obtiene latitud y longitud del dispositivo.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-  **Cámara integrada**  
+  Permite capturar o subir imágenes para cada reporte.
+
+
+-  **Almacenamiento local**  
+  Los reportes se guardan en el navegador mediante LocalStorage.
+
+-  **Interfaz responsive**  
+  Compatible con dispositivos móviles y computadoras.
+
+---
+
+# 🛠️ . Tecnologías Utilizadas
+
+**Frontend**
+
+- React
+- TypeScript
+- Vite
+
+**Mapas**
+
+- Google Maps JavaScript API
+- @react-google-maps/api
+
+**Estilos**
+
+- CSS Modules
+
+**PWA**
+
+- Workbox
+
+**Almacenamiento**
+
+- LocalStorage
+
+---
+
+# . Instalación y Ejecución
+
+## Desarrollo
+
+```bash
+npm install
+npm run dev
+
+
+Funcionalidades
+Crear reporte
+
+El usuario puede registrar un incidente con:
+
+Título
+
+Descripción
+
+Ubicación en latitud
+
+Fotografía del incidente
+
+Guardar reporte
+
+Ver reportes
+
+
+Los reportes almacenados muestran:
+
+Título
+
+Descripción
+
+Coordenadas GPS
+
+Imagen
+
+Mapa interactivo con marcador
+
+Botón para eliminar el reporte
+
+📂 Estructura del Proyecto
+
+GEO-REPORT-APP/
+│
+├── node_modules/
+├── public/
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── InstallButton.tsx
+│   │   ├── ReportForm.tsx
+│   │   └── ReportList.tsx
+│   │
+│   ├── services/
+│   │   └── reportStorage.ts
+│   │
+│   ├── types/
+│   │   └── report.ts
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── .env
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+│
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
