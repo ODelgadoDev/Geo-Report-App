@@ -6,21 +6,19 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
+  background: #E0FBFC;
+  color: #293241;
 }
 
-button,
-input,
-textarea {
-  font: inherit;
-}
+/* CONTENEDOR */
 
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
 }
+
+/* HEADER */
 
 .app-header {
   text-align: center;
@@ -30,12 +28,15 @@ textarea {
 .app-header h1 {
   font-size: 2rem;
   margin-bottom: 8px;
+  color: #3D5A80;
 }
 
 .app-header p {
-  color: #cbd5e1;
+  color: #555;
   margin-bottom: 14px;
 }
+
+/* STATUS */
 
 .status-row {
   display: flex;
@@ -51,22 +52,16 @@ textarea {
 }
 
 .online {
-  background: #14532d;
-  color: #bbf7d0;
+  background: #3D5A80;
+  color: white;
 }
 
 .offline {
-  background: #7f1d1d;
-  color: #fecaca;
+  background: #EE6C4D;
+  color: white;
 }
 
-.install-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
+/* GRID */
 
 .grid {
   display: grid;
@@ -74,16 +69,22 @@ textarea {
   gap: 20px;
 }
 
+/* CARDS */
+
 .card {
-  background: #1e293b;
-  border-radius: 16px;
+  background: white;
+  border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid #98C1D9;
 }
 
 .card h2 {
   margin-bottom: 16px;
+  color: #3D5A80;
 }
+
+/* FORM */
 
 .form {
   display: flex;
@@ -101,47 +102,54 @@ textarea {
   font-weight: bold;
 }
 
+/* INPUTS */
+
 input[type='text'],
 textarea,
 input[type='file'] {
   width: 100%;
   padding: 12px;
-  border: 1px solid #475569;
-  border-radius: 10px;
-  background: #0f172a;
-  color: #f8fafc;
+  border: 2px solid #98C1D9;
+  border-radius: 12px;
+  background: #E0FBFC;
+  color: #293241;
+  transition: 0.2s;
 }
 
-textarea {
-  resize: vertical;
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3D5A80;
+  background: white;
 }
+
+/* BOTONES */
 
 .primary-btn,
 .secondary-btn,
 .danger-btn,
 .file-btn {
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 12px 16px;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.2s ease;
-  text-align: center;
+  transition: 0.25s;
 }
 
 .primary-btn {
-  background: #22c55e;
+  background: #3D5A80;
   color: white;
 }
 
 .secondary-btn,
 .file-btn {
-  background: #3b82f6;
-  color: white;
+  background: #98C1D9;
+  color: #293241;
 }
 
 .danger-btn {
-  background: #ef4444;
+  background: #EE6C4D;
   color: white;
 }
 
@@ -149,22 +157,21 @@ textarea {
 .secondary-btn:hover,
 .danger-btn:hover,
 .file-btn:hover {
-  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
+
+/* BOXES */
 
 .gps-box,
 .camera-box {
-  background: #0f172a;
-  border: 1px solid #334155;
-  border-radius: 10px;
+  background: #E0FBFC;
+  border: 2px dashed #98C1D9;
+  border-radius: 12px;
   padding: 12px;
 }
 
-.camera-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+/* IMAGENES */
 
 .camera-video,
 .preview-image,
@@ -172,13 +179,11 @@ textarea {
   width: 100%;
   max-height: 280px;
   object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid #334155;
+  border-radius: 14px;
+  border: 2px solid #98C1D9;
 }
 
-.preview-container {
-  margin-top: 8px;
-}
+/* REPORTES */
 
 .report-list {
   display: flex;
@@ -187,30 +192,33 @@ textarea {
 }
 
 .report-item {
-  background: #0f172a;
-  border: 1px solid #334155;
+  background: white;
+  border: 1px solid #98C1D9;
   border-radius: 14px;
   padding: 16px;
 }
 
 .report-item h3 {
   margin-bottom: 8px;
+  color: #3D5A80;
 }
 
 .report-item p {
   margin-bottom: 8px;
-  color: #cbd5e1;
+  color: #555;
 }
 
+/* TEXTOS */
+
 .info-text {
-  color: #93c5fd;
-  margin-top: 6px;
+  color: #3D5A80;
 }
 
 .success-text {
-  color: #86efac;
-  margin-top: 6px;
+  color: #2a9d8f;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
   .grid {
